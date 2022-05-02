@@ -1,0 +1,23 @@
+@use 'mixins';
+
+.footer {
+  color: white;
+  background: linear-gradient(90deg, #707070 0%, #474747 100%);
+  
+  padding: 20px;
+  
+  &__container{
+    @include mixins.centered;
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+    a {
+      color: white;
+    }
+  
+    p {
+      margin: 0;
+    }
+  }
+  
+}

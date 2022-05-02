@@ -1,6 +1,6 @@
-import {NextApiRequest, NextApiResponse} from "next";
-import {products} from "../../index";
-import {IProduct} from "../../../components/Product";
+import {NextApiRequest, NextApiResponse} from 'next';
+import {products} from '../../index';
+import {IProduct} from '../../../components/Product';
 
 export interface ISnipcartProduct {
     id: string
@@ -16,9 +16,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const product: IProduct | undefined = products.find(p => p.id === productId);
     if (!product) {
         res.status(404).json({});
-        return ;
+        return;
     }
-    const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ""}
+    const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ''}
 
     res.status(200).json(snipcartProduct);
 }
