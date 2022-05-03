@@ -1,4 +1,5 @@
 import Product, { IProduct } from './Product'
+import styles from '../styles/ProductList.module.scss'
 
 interface IProductListProps {
   products: IProduct[]
@@ -6,7 +7,7 @@ interface IProductListProps {
 
 const ProductList = (props: IProductListProps) => {
   return (
-    <div className="product-list">
+    <div className={styles.product_list}>
       {props.products.map((product, index) => (
         <Product product={product} key={index} />
       ))}
