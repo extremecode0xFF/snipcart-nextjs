@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import React, { PropsWithChildren } from 'react'
+import Promotion from './Promotion'
 
 export default function Layout({
   children,
@@ -8,6 +9,7 @@ export default function Layout({
   return (
     <>
       <Header />
+      <Promotion />
       <main>{children}</main>
       <Footer />
     </>

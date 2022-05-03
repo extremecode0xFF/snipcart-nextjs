@@ -9,8 +9,8 @@
   &__container{
     @include mixins.centered;
     display: flex;
-  align-items: center;
-  justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     a {
       color: white;
     }
@@ -19,5 +19,4 @@
       margin: 0;
     }
   }
-  
 }

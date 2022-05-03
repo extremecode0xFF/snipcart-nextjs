@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <div>
           <a
-            href="https://github.com/snipcart/snipcart-nextjs"
+            href="https://github.com/extremecode0xFF/snipcart-nextjs"
             target="_blank"
             rel="noopener noreferrer"
           >
