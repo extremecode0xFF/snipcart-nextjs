@@ -11,7 +11,6 @@ const Promotion = () => {
       <div className={styles.promotional_message}>
         <h3>REDISCOVER</h3>
         <h2>Fishkeeping</h2>
-
         <p>
           An <strong>exclusive collection of bettas</strong> available for
           everyone.

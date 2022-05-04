@@ -1,10 +1,5 @@
 @use 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-/*
-Why is import here? ESLint: NO CSS Tags in Head
-An HTML link element was used to link to an external stylesheet. This can negatively affect CSS resource loading on your web page.
-*/
-@import url('https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css');
 
 * {
   box-sizing: border-box;

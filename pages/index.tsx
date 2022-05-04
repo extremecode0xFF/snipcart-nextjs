@@ -1,6 +1,5 @@
 import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Script from 'next/script'
 import { IProduct } from '../components/Product'
 import ProductList from '../components/ProductList'
 import halfMoonPicture from '../public/halfmoon.jpg'
@@ -13,19 +12,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>My awesome store</title>
-        <link rel="preconnect" href="<https://app.snipcart.com>" />
-        <link rel="preconnect" href="<https://cdn.snipcart.com>" />
-        <link rel="shortcut icon" href="favicon.ico" />
       </Head>
       <main className="main">
         <ProductList products={products} />
       </main>
-      <div
-        hidden
-        id="snipcart"
-        data-api-key="ODllMTYxOWEtMGIxNS00YWFkLTllMjMtNWMwZDVmYmY5NjM0NjM3ODY1NzI5NjM0NTE4NDA5"
-      ></div>
-      <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></Script>
     </>
   )
 }
