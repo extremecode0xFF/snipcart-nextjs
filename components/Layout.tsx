@@ -10,7 +10,7 @@ export default function Layout({
     <>
       <Header />
       <Promotion />
-      <main>{children}</main>
+      {children}
       <Footer />
     </>
   )
