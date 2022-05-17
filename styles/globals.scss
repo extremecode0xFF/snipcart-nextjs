@@ -6,6 +6,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+#__next{
+  max-width: mixins.$max-width;
+  margin: auto;
+  padding: 0 20px;
+}
+
 html, body {
   font-size: 16px;
   margin: 0;

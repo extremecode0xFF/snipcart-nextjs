@@ -1,16 +1,33 @@
 @use 'mixins';
 
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: mixins.$color-purple;//
-  z-index: 2;
+  background: mixins.$color-purple;
   width: 100%;
-  top: 0;
- 
+  transition: padding .5s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    border-left: 9999px solid mixins.$color-purple;
+    box-shadow: 9999px 0 0 mixins.$color-purple;
+  }
+
+  &_stick {
+    padding: 10px 20px;
+  }
+
   a {
     font-weight: bold;
     display: flex;
@@ -18,9 +35,10 @@
     align-items: center;
   }
 
-  a > span {
-    color: white;//mixins.$color-purple;
-    margin-left: 10px;
+  a>span {
+    position: relative;
+    color: white;
+    padding-left: 10px;
   }
 
   &__logo {

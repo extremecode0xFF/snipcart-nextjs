@@ -1,21 +1,30 @@
 @use 'mixins';
 
 .footer {
+  position: relative;
   color: white;
-  background: linear-gradient(90deg, #707070 0%, #474747 100%);
+  background: mixins.$color-grey;
   padding: 20px;
-  
-  &__container{
-    @include mixins.centered;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    a {
-      color: white;
-    }
-  
-    p {
-      margin: 0;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    border-left: 9999px solid mixins.$color-grey;
+    box-shadow: 9999px 0 0 mixins.$color-grey;
+  }
+
+  a {
+    color: white;
+  }
+
+  p {
+    margin: 0;
   }
 }

@@ -1,11 +1,33 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import logo from '../public/logo.svg'
 import cart from '../public/shopping_cart.svg'
 import styles from '../styles/Header.module.scss'
 
 export default function Header() {
+  const { ref: headerRef } = useInView()
+  const [fixed, setFixed] = useState(false)
+
+  useEffect(() => {
+    document.addEventListener('scroll', handleScroll)
+    return () => document.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      return setFixed(true)
+    }
+    setFixed(false)
+  }
+
   return (
-    <header className={styles.header}>
+    <header
+      ref={headerRef}
+      className={
+        fixed ? [styles.header, styles.header_stick].join(' ') : styles.header
+      }
+    >
       <div className={styles.header__logo}>
         <Image src={logo} alt="" width="38" height="38" />
         <h1 className={styles.header__title}>FishCastle</h1>

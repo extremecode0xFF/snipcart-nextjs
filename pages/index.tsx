@@ -28,7 +28,7 @@ export const products: IProduct[] = [
     image: halfMoonPicture,
     description:
       'The Halfmoon betta is arguably one of the prettiest betta species. It is recognized by its large tail that can flare up to 180 degrees.',
-    url: '/api/products/halfmoon',
+    url: 'https://fishcastle.netlify.app/api/products/halfmoon',
   },
   {
     id: 'dragonscale',
@@ -37,7 +37,7 @@ export const products: IProduct[] = [
     image: dragonScalePicture,
     description:
       'The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.',
-    url: '/api/products/dragonscale',
+    url: 'https://fishcastle.netlify.app/api/products/dragonscale',
   },
   {
     id: 'crowntail',
@@ -46,7 +46,7 @@ export const products: IProduct[] = [
     image: crownTailPicture,
     description:
       'The crowntail is pretty common, but interesting none the less. It\'s recognized by the shape of its tail that has an appearance of a comb.',
-    url: '/api/products/crowntail',
+    url: 'https://fishcastle.netlify.app/api/products/crowntail',
   },
   {
     id: 'veiltail',
@@ -55,7 +55,7 @@ export const products: IProduct[] = [
     image: veiltailPicture,
     description:
       'By far the most common betta fish. You can recognize it by its long tail aiming downwards.',
-    url: '/api/products/veiltail',
+    url: 'https://fishcastle.netlify.app/api/products/veiltail',
   },
 ]
 
