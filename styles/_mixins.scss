@@ -2,7 +2,7 @@ $color-purple: #9094FF;
 $color-light-grey: #EBEBEB;
 $color-grey: #777777;
 $color-dark: #343434;
-$max-width: 1240px;
+$max-width: 1280px;
 
 @mixin centered {
   width: 100%;
@@ -16,14 +16,29 @@ $max-width: 1240px;
   }
 }
 
-@mixin mobile {
-  @media (max-width: 600px) {
+@mixin smallerThanDesktop {
+  @media (max-width: 1000px) {
     @content;
   }
 }
 
-@mixin smallerThanDesktop {
-  @media (max-width: 1000px) {
+@mixin desktop {
+  @media (max-width: 1200px){
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: 992px){
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 767px){
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 420px){
     @content;
   }
 }

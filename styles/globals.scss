@@ -1,34 +1,39 @@
 @use 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
-* {
+*,*::before,*::after {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
 
-#__next{
+#__next {
   max-width: mixins.$max-width;
   margin: auto;
   padding: 0 20px;
+
+  @include mixins.desktop {
+    max-width: 970px;
+  }
+
+  @include mixins.small {
+    max-width: 750px;
+  }
+
+  @include mixins.tablet {
+    max-width: 650px;
+  }
+
+  @include mixins.mobile {
+    max-width: none;
+  }
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
-
-.app {
-  min-height: 100vh;
-  min-width: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-.product-list {
-  @include mixins.centered;
-}
-
 
 .background-image {
   position: absolute;
@@ -39,7 +44,6 @@ html, body {
   transform: rotate(20deg);
   pointer-events: none;
 }
-
 
 .promotional-message {
   margin-bottom: 100px;
@@ -57,9 +61,11 @@ html, body {
 
   h2 {
     font-size: 100px;
+
     @include mixins.mobile {
       font-size: 50px;
     }
+
     margin: 0;
     color: mixins.$color-purple;
   }

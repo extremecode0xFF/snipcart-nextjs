@@ -27,6 +27,14 @@
   h2 {
     font-size: 100px;
 
+    @include mixins.small {
+      font-size: 90px;
+    }
+
+    @include mixins.tablet {
+      font-size: 65px;
+    }
+
     @include mixins.mobile {
       font-size: 50px;
     }

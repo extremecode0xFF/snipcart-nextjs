@@ -8,11 +8,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: mixins.$color-purple;
   width: 100%;
-  transition: padding .5s ease-in-out;
-
+  transition: padding-bottom,padding-top .5s ease-in-out;
+  
   &::before {
     content: "";
     position: absolute;
@@ -24,24 +25,21 @@
     box-shadow: 9999px 0 0 mixins.$color-purple;
   }
 
-  &_stick {
-    padding: 10px 20px;
-  }
-
-  a {
+  .summary {
+    position: relative;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  a>span {
+  a > span {
     position: relative;
     color: white;
     padding-left: 10px;
   }
 
-  &__logo {
+  .logo {
     height: 38px;
     display: flex;
     justify-content: space-between;
@@ -49,9 +47,32 @@
     color: white
   }
 
-  &__title {
+  .title {
     padding: 0;
     font-size: 24px;
     margin: 0 0 0 20px;
   }
+
+  .count{
+    padding: 0px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 11px;
+    height: 20px;
+    width: 20px;
+    background: #9094FF;
+    margin-left: 1.3rem;
+    margin-bottom: 2.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.stick {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
