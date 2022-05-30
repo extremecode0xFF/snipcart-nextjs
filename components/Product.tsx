@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import styles from '../styles/Product.module.scss'
 
 export interface IProduct {
@@ -7,7 +7,7 @@ export interface IProduct {
   price: number
   url: string
   description: string
-  image: StaticImageData
+  image: string
 }
 
 interface IProductProps {
@@ -20,9 +20,9 @@ const Product = (props: IProductProps) => {
       <h2 className={styles.product__title}>{props.product.name}</h2>
       <p className={styles.product__description}>{props.product.description}</p>
       <div className={styles.product__image}>
-        <Image src={props.product.image} alt={props.product.image.src} />
+        <Image src={props.product.image} alt={props.product.name} layout="fill" />
       </div>
-      <div className="product__price-button-container">
+      <div className={styles.product__price_container}>
         <div className={styles.product__price}>
           ${props.product.price.toFixed(2)}
         </div>
@@ -32,7 +32,7 @@ const Product = (props: IProductProps) => {
           data-item-name={props.product.name}
           data-item-price={props.product.price}
           data-item-url={props.product.url}
-          data-item-image={props.product.image.src}
+          data-item-image={props.product.image}
         >
           Add to cart
         </button>

@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <p>
-        Next.js app with a&nbsp;<a href="https://snipcart.com">Snipcart</a>
-        &nbsp;- powered store
+        Next.js app with a <a href="https://snipcart.com">Snipcart</a> - powered
+        store
       </p>
       <div>
         <a

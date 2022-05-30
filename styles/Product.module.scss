@@ -10,7 +10,7 @@
   ".            .            image";
   grid-template-columns: 1fr 1fr 3fr;
   margin-bottom: 100px;
-  grid-column-gap: 100px;
+  grid-column-gap: 50px;
 
   &:nth-of-type(odd) {
     grid-template-areas:
@@ -20,20 +20,13 @@
     "image .            .";
     grid-template-columns: 3fr 1fr 1fr;
 
-    @include mixins.mobile {
+    @include mixins.small {
       grid-template-areas:
       "image        image      "
       "title         title     "
       "description  description"
       "button       button     ";
       grid-template-columns: 1fr 1fr;
-
-      img {
-        height: 300px;
-        max-height: 300px;
-        width: 100%;
-        margin-bottom: 30px;
-      }
     }
   }
 
@@ -48,7 +41,7 @@
     grid-area: description;
     line-height: 1.75rem;
     min-height: 175px;
-    @include mixins.mobile {
+    @include mixins.small {
       min-height: 0;
     }
   }
@@ -60,22 +53,21 @@
   }
 
   &__image {
+    position: relative;
     grid-area: image;
-    width: 100%;
-    max-height: 90%;
+    padding: 0 0 58% 0;
     object-fit: fill;
     box-shadow: 0 18.025px 43.775px rgba(0, 0, 0, 0.25);
-
-    @include mixins.mobile {
-      height: 300px;
-      max-height: 300px;
-      object-fit: contain;
+    img {
+      object-fit: cover;
+      top: 0;
+      left: 0;
       width: 100%;
-      margin-bottom: 30px;
+      height: 100%;
     }
   }
 
-  &__price-button-container {
+  &__price_container {
     display: flex;
     grid-area: button;
   }
@@ -113,19 +105,29 @@
       transition: all 0.3s cubic-bezier(0.16, 0.8, 0.66, 1.54);
     }
   }
-  // TODO move mixins in colors
-  @include mixins.mobile {
+
+  @include mixins.small {
     grid-template-areas:
     "image        image      "
     "title         title     "
     "description  description"
     "button       button     ";
     grid-template-columns: 1fr 1fr;
-
+    .product__title {
+      text-align: center;
+    }
+    .product__description {
+      text-align: center;
+    }
+    
     .product__image {
-      height: 300px;
+      height: auto;
       width: 100%;
       margin-bottom: 30px;
+    }
+    .product__price_container {
+      display: flex;
+      justify-content: center;
     }
   }
 }

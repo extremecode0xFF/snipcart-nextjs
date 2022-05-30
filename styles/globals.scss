@@ -1,7 +1,9 @@
 @use 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
@@ -10,10 +12,6 @@
   max-width: mixins.$max-width;
   margin: auto;
   padding: 0 20px;
-
-  @include mixins.desktop {
-    max-width: 970px;
-  }
 
   @include mixins.small {
     max-width: 750px;
@@ -26,6 +24,25 @@
   @include mixins.mobile {
     max-width: none;
   }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 5px solid transparent;
+  border-radius: 100px;
+  background-color: mixins.$color-purple;
+  background-clip: content-box;
 }
 
 html,
