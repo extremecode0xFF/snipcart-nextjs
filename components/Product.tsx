@@ -20,7 +20,7 @@ const Product = (props: IProductProps) => {
       <h2 className={styles.product__title}>{props.product.name}</h2>
       <p className={styles.product__description}>{props.product.description}</p>
       <div className={styles.product__image}>
-        <Image src={props.product.image} alt={props.product.name} priority layout="fill" />
+        <Image src={props.product.image} alt={props.product.name} layout="fill" />
       </div>
       <div className={styles.product__price_container}>
         <div className={styles.product__price}>
