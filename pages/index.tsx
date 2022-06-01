@@ -2,8 +2,7 @@ import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { IProduct } from '../components/Product'
 import ProductList from '../components/ProductList'
-import { child, DataSnapshot, get, ref } from 'firebase/database'
-import { firebaseDatabase } from '../firebase/config'
+import { getProducts } from '../firebase/request'
 
 const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
   return (
@@ -25,15 +24,14 @@ const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
 export const getStaticProps: GetStaticProps = async () => {
   let products: IProduct[] = []
   try {
-    const response: DataSnapshot = await get(
-      child(ref(firebaseDatabase), `products`)
-    )
-    if (response.exists()) {
-      const payload: IProduct[] = response.val()
-      products = payload
+    const payload: IProduct[] = await getProducts()
+    products = payload
+  } catch(error) {
+    if (error instanceof Error) {
+      console.log(error.message)
+    } else {
+      console.log(error)
     }
-  } catch {
-    console.log('ERROR: Cannot get data from the server')
   }
   return {
     props: {

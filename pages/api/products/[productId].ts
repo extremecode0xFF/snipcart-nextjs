@@ -1,24 +1,23 @@
-import {NextApiRequest, NextApiResponse} from 'next';
-import {products} from '../../index';
-import {IProduct} from '../../../components/Product';
+import { NextApiRequest, NextApiResponse } from 'next'
+import { IProduct } from '../../../components/Product'
+import { getProducts } from '../../../firebase/request'
 
-export interface ISnipcartProduct {
-    id: string
-    name: string
-    price: number
-    url: string
-    description: string
-    image: string // Hack to pass the image URL instead of the StaticImage object we required
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const {productId} = req.query;
-    const product: IProduct | undefined = products.find(p => p.id === productId);
-    if (!product) {
-        res.status(404).json({});
-        return;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { productId } = req.query
+  try {
+    const payload: IProduct[] = await getProducts()
+    const product: IProduct | undefined = payload.find(
+      (p) => p.id === productId
+    )
+    res.status(200).json(product)
+  } catch (error) {
+    if (error instanceof Error) {
+      res.status(404).json(error.message)
+    } else {
+      res.status(404).json(error)
     }
-    const snipcartProduct: ISnipcartProduct = {...product, image: product?.image.src ?? ''}
-
-    res.status(200).json(snipcartProduct);
+  }
 }
