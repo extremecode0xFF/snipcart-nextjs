@@ -1,7 +1,8 @@
 # FishCastle
 
----
 <a href='https://nextjs.org/'>![Next](https://img.shields.io/badge/NEXT-12.1.5-blue?style=for-the-badge&logo=nextdotjs)</a> <a href='https://snipcart.com/'>![Snipcart](https://img.shields.io/badge/SNIPCART-3.4.0-blue.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEzcHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDEzIDE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMyAxNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BICA8aW1hZ2UgaWQ9ImltYWdlMCIgd2lkdGg9IjEzIiBoZWlnaHQ9IjE0IiB4PSIwIiB5PSIwIiAgICBocmVmPSJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUEwQUFBQU9DQU1BQUFERG9XYmdBQUFBQkdkQlRVRUFBTEdQQy94aEJRQUFBQ0JqU0ZKTkFBQjZKZ0FBZ0lRQUFQb0FBQUNBNkFBQWRUQUFBT3BnQUFBNm1BQUFGM0NjdWxFOEFBQUJPMUJNVkVYL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96UUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96UUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96QUQvekFEL3pBRC96Z0QvMEFEMXhBRE9wQUQ3eVFEL3p3RC96UUQyeFFEVHFBQzNrZ0IyWHdCWlJ3Q0Zhd0M4bHdEWHJBRDZ5QUQreXdDSmJnQnhXd0NTZFFEQ213RHd3QUMvbVFDUGN3QnlXd0NqZ3dCelhBQjNYd0RIbndENHhnRG11QUNtaFFEeXdRQzVsQUI1WVFCc1ZnQ2ZnQURmc3dEOXl3RFpyZ0NYZVFCcVZRQi9aZ0RCbXdENXh3Q2hnUUQwd3dCd1dnQitaUUQ5eWdDUmRBQ1RkZ0R5d2dEQm1nQ05jUUROcEFDeWpnQlhSUUIwWFFDeGpnREZuZ0QvLy8rbkkzTHhBQUFBS25SU1RsTUFCbExNKzhWTEJER2U4TzJZTFJxRDVlSjlGN1dwL2ZIenRxV0M0SGtWTUozc2xTc0ZVY3ZFU1FQM044SFdBQUFBQVdKTFIwUm95MnowSWdBQUFBZDBTVTFGQitZR0FnNHdDWVdFekVrQUFBQzVTVVJCVkFqWFkyQmdZR0JrWW1aaFpXTm5BQU1PVGk0dGJTMXVIbDRnbTQ5ZlFGdEhWMC9mUUZ0UVNKaEJ4TkRJMk1UVXpOekMwa3BMbEVITTJzYld6dDdCMGNuWnhWQ2NRY3ZLMWMzZFEwZEh4OVBMV29KQlM4dmJ4OWZQUDBCTE8xQUx4TE0yQ0F3S0Rna04wd1h4d2lNY2RIUU1JaDJqb21Na2dLYkV1c2E1eHlmWStTVnFjVEZJR2hvbEpmdW1wS1lsR1JsS01mQkpBMjAzU2pmUzBaYVJsUU82Umw0QjVESkZKV1dJUTFWVTFWalVOVFNCTEFBcFVoOXZOUGlHQndBQUFDVjBSVmgwWkdGMFpUcGpjbVZoZEdVQU1qQXlNaTB3Tmkwd01sUXhORG8wT0Rvd09Dc3dNRG93TVBYbmQvTUFBQUFsZEVWWWRHUmhkR1U2Ylc5a2FXWjVBREl3TWpJdE1EWXRNREpVTVRRNk5EZzZNRGtyTURBNk1EQWl6Y1Q3QUFBQUFFbEZUa1N1UW1DQyIgLz48L3N2Zz4%3D)</a> <a href='https://firebase.google.com/'>![Firebase](https://img.shields.io/badge/FIREBASE-9.8.1-blue?style=for-the-badge&logo=firebase)</a> <a href='https://www.netlify.com/'>![Netlify](https://img.shields.io/badge/NETLIFY-10.4.0-blue?style=for-the-badge&logo=netlify)</a>
+
+---
 
 **E-Commerce Application with Next.js**
 
@@ -35,8 +36,8 @@ And all this experience helped me to create this wonderful application.
     npm install
     ```
 2. Setup firebase:
-    1. Follow steps how to create own project at [firebase](https://firebase.google.com/docs/web/setup).
-    2. Create ***.env.local*** file in the root directory and fill in all the values for each of the fields according to your project configurations:
+    - Follow steps how to create own project at [firebase](https://firebase.google.com/docs/web/setup).
+    - Create ***.env.local*** file in the root directory and fill in all the values for each of the fields according to your project configurations:
     ```
     NEXT_PUBLIC_FIREBASE_API_KEY = ...
     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN = ...
@@ -47,7 +48,7 @@ And all this experience helped me to create this wonderful application.
     NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID = ...
     NEXT_PUBLIC_FIREBASE_DATABSE_URL = ...
     ```
-    3. Create Realtime DataBase and add information about products.
+    - Create Realtime DataBase and add information about products.
     Example:
     ```json
     {
@@ -66,15 +67,15 @@ And all this experience helped me to create this wonderful application.
     ```
     >! Images can be storage in [Firebase Storage]()
 3. Setup Snipcart
-    1. Create [Snipcart account](https://app.snipcart.com/register)
-    2. Copy [API Key](https://app.snipcart.com/dashboard/account/credentials)
-    3. Paste this key in **.env.local**
+    - Create [Snipcart account](https://app.snipcart.com/register)
+    - Copy [API Key](https://app.snipcart.com/dashboard/account/credentials)
+    - Paste this key in **.env.local**
     
     Example:
     ```
     NEXT_PUBLIC_SNIPCART_API_KEY="[API KEY]"
     ```
-    4. Add your deploy domain in this [section](https://app.snipcart.com/dashboard/account/domains)
+    - Add your deploy domain in this [section](https://app.snipcart.com/dashboard/account/domains)
 4. (Optional)Deployments Guide:  
     [Vercel](https://vercel.com/docs/concepts/deployments/overview)  
     [Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)
